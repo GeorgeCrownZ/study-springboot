@@ -1,0 +1,23 @@
+# 关闭模板引擎的缓存
+spring:
+  thymeleaf:
+    cache: false
+  # 我们的配置文件的真实位置
+  messages:
+    basename: i18n.login
+  # 时间日期格式化
+  mvc:
+    format:
+      date: yyyy-MM-dd
+  datasource:
+    data-username: root
+    data-password: root3306
+    url: jdbc:mysql://47.98.47.51:3306/mybatis?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+# 整合mybatis
+mybatis:
+  type-aliases-package: com.zc.pojo
+  mapper-locations: classpath:mybatis/mapper/*.xml
+server:
+  servlet:
+    context-path: /zc
